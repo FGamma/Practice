@@ -32,9 +32,9 @@ def main():
         print(f"The volume of a sphere with radius {radius} is {round(volume, 2)}")
 
     except ValueError as e:
-        print(f"Input error: {e}")
+        raise e
     except Exception as e:
-        print(f"Unexpected error: {e}")
+        raise RuntimeError(f"Unexpected error : {e}") from e
 
 
 if __name__ == "__main__":
